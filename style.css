@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.first-part{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: deepskyblue;
+}
+.bg-bar{
+    height: 10vh;
+    width: 100%;
+    background-color: deepskyblue;
+}
+.bar{
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.hamburger{
+    display: none;
+}
+.bg-bar .bar .logo{
+    font-size: 30px;
+    margin-top: 18px;
+
+}
+.bg-bar .bar .navbar{
+    height: 100%;
+    width: 40%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.custom-shape-divider-bottom-1609180442 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1609180442 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 177px;
+}
+
+.custom-shape-divider-bottom-1609180442 .shape-fill {
+    fill: white;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1609180442 svg {
+        width: calc(100% + 1.3px);
+        height: 111px;
+    }
+}
+/*--------------- RESPONSIVE-PART-NAVBAR --------------- */
+@media screen and (max-width : 768px){
+    .hamburger{
+         position: absolute;
+         right: 5%;
+         top: 20px;
+         display: inline;
+         cursor: pointer;
+    }
+    .bg-bar{
+        position: relative;
+        height: 10vh;
+        width: 100%; 
+    }
+    .bar{
+        width: 100%;
+    }
+    .bg-bar .bar .logo{
+        margin-left: 40px;
+    }
+    .bg-bar .bar .navbar{
+        position:fixed;
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 95% -20%);
+        -webkit-clip-path : circle(100px at 95% -20%);
+        transition: all 1s ease-out;
+    }
+    .bg-bar .bar .navbar .navbar-link{
+        color: deepskyblue;
+    }
+    .bg-bar .bar .navbar.open{
+        clip-path: circle(1000px at 50% -10%);
+        -webkit-clip-path : circle(1000px at 50% -10%);
+    }
+}
+/*------------------------------------------------------- */
+/*------------------------ 2ND-PART ------------------------*/
+.nd-part{
+    height: 500px;
+    width: 80%;
+    margin: auto;
+}
+.semestres{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.nd-part h1{
+    padding-bottom: 60px;
+    text-align: center;
+
+}
+.cercle{
+    height: 300px;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 40%;
+}
+.fst-semestre{
+    background-color: firebrick;
+    position: relative;
+}
+.nd-semestre{  
+    background-color: gold;
+}
+/*------------------------ table animtion------------------------ */
+
+.table {
+    margin: auto;
+    cursor: pointer;
+    background: firebrick;
+    position: absolute;
+    z-index: 100;
+    transform: scale(0.2);
+    left: -80px;
+    top: -100px;
+    width: 500px; height: 500px;
+  }
+  .fade{
+    animation: animclick 1.5s ;
+  }
+  @keyframes animclick{
+    0%{
+        opacity: 0;
+        transform: scale(0.2);
+        
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        
+    }
+}
+
